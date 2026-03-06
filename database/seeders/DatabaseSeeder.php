@@ -10,12 +10,12 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-
         User::updateOrCreate(
             ['email' => 'admin@test.com'],
             [
                 'name' => 'Admin',
                 'password' => Hash::make('123456'),
+                'role' => 'admin'
             ]
         );
 
@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'User',
                 'password' => Hash::make('123456'),
+                'role' => 'user'
             ]
         );
     }
