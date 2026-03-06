@@ -10,14 +10,17 @@ RUN docker-php-ext-install pdo pdo_mysql zip
 
 RUN a2enmod rewrite
 
+# install composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
 WORKDIR /var/www/html
 
 COPY . /var/www/html
 
-# composer install
-RUN curl -sS https://getcomposer.org/installer | php
-RUN php composer.phar install --no-dev --optimize-autoloader
+# install laravel dependencies
+RUN composer install --no-dev --optimize-autoloader
 
 RUN chown -R www-data:www-data /var/www/html
 
+# laravel public folder serve
 RUN sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf
