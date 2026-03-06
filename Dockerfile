@@ -23,6 +23,7 @@ RUN composer install --no-dev --optimize-autoloader
 RUN chown -R www-data:www-data /var/www/html
 RUN chmod -R 775 storage bootstrap/cache
 
+RUN touch database/database.sqlite
 RUN php artisan migrate --force
 RUN php artisan db:seed --force
 
