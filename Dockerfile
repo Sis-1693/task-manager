@@ -5,7 +5,8 @@ RUN apt-get update && apt-get install -y \
     unzip \
     curl \
     libzip-dev \
-    sqlite3
+    sqlite3 \
+    libsqlite3-dev
 
 RUN docker-php-ext-install pdo pdo_sqlite zip
 
@@ -18,9 +19,10 @@ WORKDIR /var/www/html
 COPY . /var/www/html
 
 RUN composer install --no-dev --optimize-autoloader
-RUN php artisan migrate --force
 
 RUN chown -R www-data:www-data /var/www/html
 RUN chmod -R 775 storage bootstrap/cache
+
+RUN php artisan migrate --force
 
 RUN sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf
