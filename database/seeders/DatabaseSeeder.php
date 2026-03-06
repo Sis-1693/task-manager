@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
             ['email' => 'admin@test.com'],
             [
                 'name' => 'Admin',
-                'password' => Hash::make('123456'),
+                'password' => '$2y$12$9bR4M2YfXv6zG6p4YpZ6Uu0mE9wQx8m0jXQHqz8E1x3nGkq0P8H1G' // password:123456
             ]
         );
 
@@ -23,9 +23,8 @@ class DatabaseSeeder extends Seeder
             ['email' => 'user@test.com'],
             [
                 'name' => 'User',
-                'password' => Hash::make('123456'),
+                'password' => '$2y$12$9bR4M2YfXv6zG6p4YpZ6Uu0mE9wQx8m0jXQHqz8E1x3nGkq0P8H1G'
             ]
         );
-
     }
 }
