@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Project;
+use Illuminate\Support\Facades\Auth;
 
 class ProjectController extends Controller
 {
@@ -16,7 +17,8 @@ class ProjectController extends Controller
 
         $project = Project::create([
             'title' => $request->title,
-            'description' => $request->description
+            'description' => $request->description,
+            'user_id' => Auth::id() // logged in user id
         ]);
 
         return response()->json([
@@ -24,9 +26,10 @@ class ProjectController extends Controller
             'data' => $project
         ], 201);
     }
+
     public function index()
     {
-        $projects = Project::all();
+        $projects = Project::with('tasks')->get();
 
         return response()->json([
             'data' => $projects
