@@ -77,7 +77,9 @@ class TaskController extends Controller
         $task = Task::findOrFail($id);
 
         $task->update([
-            'title' => $request->title
+            'title' => $request->title,
+            'priority' => $request->priority,
+            'due_date' => $request->due_date
         ]);
 
         return response()->json([

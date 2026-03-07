@@ -18,8 +18,8 @@ class Task extends Model
         'project_id',
         'user_id',
         'title',
-        'status',
         'priority',
-        'due_date'
+        'due_date',
+        'status'
     ];
 }
