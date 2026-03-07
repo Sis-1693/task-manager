@@ -10,7 +10,7 @@ class TaskController extends Controller
 {
     public function store(Request $request)
     {
-       
+
         $task = Task::create([
             'project_id' => $request->project_id,
             'user_id' => $request->user_id,
@@ -70,6 +70,19 @@ class TaskController extends Controller
 
         return response()->json([
             'data' => $tasks
+        ]);
+    }
+    public function update(Request $request, $id)
+    {
+        $task = Task::findOrFail($id);
+
+        $task->update([
+            'title' => $request->title
+        ]);
+
+        return response()->json([
+            'message' => 'Task updated successfully',
+            'data' => $task
         ]);
     }
 }
