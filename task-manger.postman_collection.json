@@ -24,15 +24,13 @@
           }
         },
         "url": {
-          "raw": "http://127.0.0.1:8001/api/login",
-          "protocol": "http",
+          "raw": "https://task-manager-s0b7.onrender.com/api/login",
+          "protocol": "https",
           "host": [
-            "127",
-            "0",
-            "0",
-            "1"
+            "task-manager-s0b7",
+            "onrender",
+            "com"
           ],
-          "port": "8001",
           "path": [
             "api",
             "login"
@@ -49,7 +47,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "33|z1u5lrhxuPUZeBhbX9AE3dk7pwDFpWAeOMdLDnaE9a7eb90d",
+              "value": "1|39VfuWZ3SuCJ7TbhLBxN1j5LGP3mWHgu48e7vAwt0d116c55",
               "type": "string"
             }
           ]
@@ -58,7 +56,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"title\": \"New Website\",\r\n  \"description\": \"Client project\"\r\n}",
+          "raw": "{\r\n  \"title\": \"New Website\",\r\n  \"description\": \"User project\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -66,15 +64,13 @@
           }
         },
         "url": {
-          "raw": "http://127.0.0.1:8001/api/projects",
-          "protocol": "http",
+          "raw": "https://task-manager-s0b7.onrender.com/api/projects",
+          "protocol": "https",
           "host": [
-            "127",
-            "0",
-            "0",
-            "1"
+            "task-manager-s0b7",
+            "onrender",
+            "com"
           ],
-          "port": "8001",
           "path": [
             "api",
             "projects"
@@ -91,7 +87,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "33|z1u5lrhxuPUZeBhbX9AE3dk7pwDFpWAeOMdLDnaE9a7eb90d",
+              "value": "4|NRsxSok418Ca1jhzO1o91GWsQnVcmNPrL9Ysu18Oe2b4a911",
               "type": "string"
             }
           ]
@@ -108,15 +104,13 @@
           }
         },
         "url": {
-          "raw": "http://127.0.0.1:8001/api/tasks",
-          "protocol": "http",
+          "raw": "https://task-manager-s0b7.onrender.com/api/tasks",
+          "protocol": "https",
           "host": [
-            "127",
-            "0",
-            "0",
-            "1"
+            "task-manager-s0b7",
+            "onrender",
+            "com"
           ],
-          "port": "8001",
           "path": [
             "api",
             "tasks"
@@ -133,7 +127,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "35|CVW5T5t6D9hPN9e4ggkUAsmYpS0Utzmz71Z8Z21w139b7d41",
+              "value": "4|NRsxSok418Ca1jhzO1o91GWsQnVcmNPrL9Ysu18Oe2b4a911",
               "type": "string"
             }
           ]
@@ -141,15 +135,13 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://127.0.0.1:8001/api/projects",
-          "protocol": "http",
+          "raw": "https://task-manager-s0b7.onrender.com/api/projects",
+          "protocol": "https",
           "host": [
-            "127",
-            "0",
-            "0",
-            "1"
+            "task-manager-s0b7",
+            "onrender",
+            "com"
           ],
-          "port": "8001",
           "path": [
             "api",
             "projects"
@@ -201,7 +193,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "39|o8jvNAmRL4snilgLxqiLDQyBeRDDdQ60jvBgdNOL19c59e5c",
+              "value": "4|NRsxSok418Ca1jhzO1o91GWsQnVcmNPrL9Ysu18Oe2b4a911",
               "type": "string"
             }
           ]
@@ -209,15 +201,13 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://127.0.0.1:8001/api/users",
-          "protocol": "http",
+          "raw": "https://task-manager-s0b7.onrender.com/api/users",
+          "protocol": "https",
           "host": [
-            "127",
-            "0",
-            "0",
-            "1"
+            "task-manager-s0b7",
+            "onrender",
+            "com"
           ],
-          "port": "8001",
           "path": [
             "api",
             "users"
@@ -234,7 +224,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "39|o8jvNAmRL4snilgLxqiLDQyBeRDDdQ60jvBgdNOL19c59e5c",
+              "value": "4|NRsxSok418Ca1jhzO1o91GWsQnVcmNPrL9Ysu18Oe2b4a911",
               "type": "string"
             }
           ]
@@ -251,15 +241,13 @@
           }
         },
         "url": {
-          "raw": "http://127.0.0.1:8001/api/tasks/1/status",
-          "protocol": "http",
+          "raw": "https://task-manager-s0b7.onrender.com/api/tasks/1/status",
+          "protocol": "https",
           "host": [
-            "127",
-            "0",
-            "0",
-            "1"
+            "task-manager-s0b7",
+            "onrender",
+            "com"
           ],
-          "port": "8001",
           "path": [
             "api",
             "tasks",
