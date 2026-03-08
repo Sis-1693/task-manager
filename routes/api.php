@@ -9,8 +9,12 @@ use App\Models\Task;
 
 Route::post('/login', [AuthController::class, 'login']);
 
-Route::middleware(['auth:sanctum', 'role:admin'])->group(function () {
+Route::middleware(['auth:sanctum','role:admin'])->group(function () {
+
     Route::post('/projects', [ProjectController::class, 'store']);
+
+    Route::put('/projects/{id}', [ProjectController::class, 'update']);
+
 });
 Route::middleware(['auth:sanctum', 'role:admin'])->group(function () {
     Route::post('/tasks', [TaskController::class, 'store']);
