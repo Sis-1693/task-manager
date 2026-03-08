@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\TaskController;
+use App\Models\Task;
 
 
 Route::post('/login', [AuthController::class, 'login']);
@@ -33,4 +34,7 @@ Route::middleware(['auth:sanctum', 'role:admin'])->group(function () {
     Route::post('/tasks', [TaskController::class, 'store']);
 
     Route::put('/tasks/{id}', [TaskController::class, 'update']);
+});
+Route::get('/tasks', function () {
+    return response()->json(Task::all());
 });
